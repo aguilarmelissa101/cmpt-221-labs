@@ -1,17 +1,46 @@
+##Name: Melissa Aguilar
+
+##vehicle_part2
+
+##This file calls the vehicle_Class file
+
 from vehicle_Class import (Vehicle_Class, gas_Vehicle, electric_Vehicle)
 
 def check_Tank(tank):
     if (tank == "E") or (tank == "ELECTRIC"):
         addType = electric_Vehicle()
-        init_Fuel_Amount =  2
-        maxTank =
+        
+        init_kWh_Amount =  20
+        max_kWh = 100
+        
+        print("You have only ", init_kWh_Amount ," kWh of charge left.")
+        
+        charge_Car = int(input("Would you like to charge the car? [Y/N]: ").upper()
+        if (charge_Car  == "Y") or (charge_Car == "YES"):
+            amount_kWh_entered = int(input("Enter how much kWh charge you would like to add (1 - 80) : ")
+            if (amount_kWh_entered <= 0) or (amount_kWh_entered > 80):
+                print ("Invalid amount - Try Again")
+                amount_kWh_entered = int(input("Enter how much kWh charge you would like to add (greater than zero): ")
+            
+            fuel_added = init_Fuel_Amount + amount_fuel_entered
+    
+        
     else:
         addType = gas_Vehicle()
-
-
-
-
-
+        init_Fuel_Amount =  2
+        maxFuel = 12
+        
+        print("You have only ", init_Fuel_Amount ,"gallons of gas left.")
+        
+        fill_Tank = int(input("Would you like to add some gas to the car? [Y/N]: ").upper()
+        if (fill_Tank == "Y") or (fill_Tank == "YES"):
+            amount_fuel_entered = int(input("Enter how many gallons would you like to add (1-10): ")
+            if (amount_fuel_entered <= 0) or (amount_fuel_entered >10):
+                print ("Invalid amount - Try Again")
+                amount_fuel_entered = int(input("Enter how many gallons would you like to add (1-10): ")
+            
+            fuel_added = init_Fuel_Amount + amount_fuel_entered
+    
 
 def main():
     ##Intro to program
