@@ -1,0 +1,111 @@
+##Name: Melissa Aguilar
+
+##vehicle_part2
+
+##This file calls the vehicle_Class file
+
+from vehicle_Class import (Vehicle_Class, gas_Vehicle, electric_Vehicle)
+
+def check_Tank(tank):
+    if (tank == "E") or (tank == "ELECTRIC"):
+        addType = electric_Vehicle()
+        
+        init_kWh_Amount =  20
+        max_kWh = 100
+        
+        print("You have only ", init_kWh_Amount ," kWh of charge left.")
+        
+        charge_Car = int(input("Would you like to charge the car? [Y/N]: ").upper()
+        if (charge_Car  == "Y") or (charge_Car == "YES"):
+            amount_kWh_entered = int(input("Enter how much kWh charge you would like to add (1 - 80) : ")
+            if (amount_kWh_entered <= 0) or (amount_kWh_entered > 80):
+                print ("Invalid amount - Try Again")
+                amount_kWh_entered = int(input("Enter how much kWh charge you would like to add (greater than zero): ")
+            
+            fuel_added = init_Fuel_Amount + amount_fuel_entered
+    
+        
+    else:
+        addType = gas_Vehicle()
+        init_Fuel_Amount =  2
+        maxFuel = 12
+        
+        print("You have only ", init_Fuel_Amount ,"gallons of gas left.")
+        
+        fill_Tank = int(input("Would you like to add some gas to the car? [Y/N]: ").upper()
+        if (fill_Tank == "Y") or (fill_Tank == "YES"):
+            amount_fuel_entered = int(input("Enter how many gallons would you like to add (1-10): ")
+            if (amount_fuel_entered <= 0) or (amount_fuel_entered >10):
+                print ("Invalid amount - Try Again")
+                amount_fuel_entered = int(input("Enter how many gallons would you like to add (1-10): ")
+            
+            fuel_added = init_Fuel_Amount + amount_fuel_entered
+    
+
+def main():
+    ##Intro to program
+    print("Welcome to Melissa's Car Dealership!")
+    print("This program will allow you to describe your dream car!")
+
+    #User Inputs
+    carType = str(input("What type of car do you want? E for electric or F for fuel:  ")).upper()
+
+    #Restrict car type
+    if (carType != "E") or (carType != "ELECTRIC") or (carType != "F") or (carType != "FUEL") :
+        print("Invalid choice - Try Again")
+        carType = str(input("What type of car do you want? E for electric or F for fuel:  ")).upper()
+
+    carMaker = str(input("Enter the name of the vehicle maker: "))
+
+    print("For the color of your car, we have red, white, blue and black.")
+    carColor = str(input("Enter the color of your vehicle: ")).upper()
+
+    #Restrict colors
+    if (carColor != "RED") or (carColor != "BLUE") or (carColor != "WHITE") OR (carColor != "BLACK"):
+        print("Invalid choice - Try Again")
+        print("We only have car's in red, white, blue, and black.")
+        carColor = str(input("Enter the color of your vehicle: ")).upper()
+
+
+    #Loop until quits
+    #Enter choice
+    print("We have one last vehicle that matches the description your dream car! ")
+
+    choice = "-10"
+    while choice != "0":
+        print("Here are your options:")
+        print("1: Check and Add the amount of gas or charge in your car")
+        print("2: Read the current amount mileage")
+        print("3: Test drive the car")
+        print("4: Change the color of your car")
+        print("5: Add number of passengers allowed in the car")
+        print("6: Print results")
+        print("0: Quit")
+
+        #input
+        choice = input("Please enter your number choice: ")
+        print("")
+
+        #output
+        if choice =="1":
+            check_Tank(carType)
+        elif choice =="2":
+            read_Mileage()
+        elif choice =="3":
+            test_Drive()
+        elif choice =="4":
+            change_Color()
+        elif choice =="5":
+            add_Passengers()
+        elif choice =="6":
+            print_Car()
+        elif choice=="0":
+            print("Thank you and come again!")
+        else:
+            print("Invalid choice")
+
+
+
+
+
+
