@@ -1,0 +1,14 @@
+.special{
+    color: yellow;
+
+    <!-- The reason I made the font in italic was to-->
+    <!--show that I know what I am doing but the cursive font was not functioning on my desktop-->
+    font-style: italic;
+
+}
+
+
+.change{
+    border-style: solid;
+
+}
