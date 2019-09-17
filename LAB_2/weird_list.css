@@ -1,6 +1,10 @@
 .special{
     color: yellow;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 42b9cdf3d3da30862940123d6deb8167f46404c6
     <!-- The reason I made the font in italic was to-->
     <!--show that I know what I am doing but the cursive font was not functioning on my desktop-->
     font-style: italic;
