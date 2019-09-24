@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Arbutus' rel='stylesheet'>
-    <link rel = "stylesheet" type="text/css" href="style.css">
+    <link rel = "stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
     <title>Melissa's Resume</title>
 
+    <style>
+        html {
+        background: {{url_for('static', filename='img/background.jpg')}} no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}</style>
 </head>
 <body>
 
@@ -18,17 +26,20 @@
             <h4>Melissa Aguilar's Lab 2 Assignment</h4>
         </div>
         <ul class="nav-links">
-            <li><a href="home_page.html">HOME</a></li>
 
-            <li><a href="resume_page.html">RESUME</a></li>
+
+            <li><a href="/home">HOME</a></li>
+
+            <li><a href="/resume">RESUME</a></li>
         </ul>
     </nav>
+
 
 
     <!--This will be my Welcoming page -->
     <div class="welcomepage-box">
         <!--Image of myself -->
-        <img src="../images_lab2/melissaresumepic.jpg" class="profile-pic">
+        <img src="{{url_for('static', filename='img/melissaresumepic.jpg')}}" class="profile-pic">
         <h1>Melissa Aguilar</h1>
 
         <h5>Double Major in Computer Science and Games and Emerging Media at Marist College </h5>
@@ -42,7 +53,7 @@
         </p>
 
         <!--Hyperlink the LinkedIn image -->
-        <a href="https://www.linkedin.com/in/melissa-aguilar-a12ba117a/" target="_blank"><img src="../images_lab2/linkedin-logo.png" class= "linkedin-icon"></a>
+        <a href="https://www.linkedin.com/in/melissa-aguilar-a12ba117a/" target="_blank"><img src="{{url_for('static', filename='img/linkedin-logo.png')}}" class= "linkedin-icon"></a>
 
             <style>
             .second-font{
@@ -56,7 +67,7 @@
 
         </div>
 
-        <img src="../images_lab2/funnymeme.png" class="meme-pic">
+        <img src="{{url_for('static', filename='img/funnymeme.png')}}" class="meme-pic">
     </div>
 </section>
 

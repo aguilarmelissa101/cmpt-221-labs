@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Arbutus' rel='stylesheet'>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
 
   <style>
 
@@ -42,9 +42,9 @@ background-color: white;
             <h7>Melissa Aguilar's Lab 2 Assignment</h7>
         </div>
         <ul class="nav-links">
-          <h7><li><a href="home_page.html">HOME</a></li></h7>
+          <h7><li><a href="/home">HOME</a></li></h7>
 
-            <li><a href="resume_page.html">RESUME</a></li>
+            <li><a href="/resume">RESUME</a></li>
         </ul>
     </nav>
 </section>
