@@ -15,6 +15,7 @@ def index():
 # Run Flask Programmatically
 if __name__ == "__main__":
     # Set Debug to true, set host IP to localhost, and set port to 80
+    # Mac does not support port 80 (Spoke with you already)
     app.run(debug=True, host="127.0.0.1")
 
 
