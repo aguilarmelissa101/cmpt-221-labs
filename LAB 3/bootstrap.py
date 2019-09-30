@@ -1,18 +1,21 @@
 ##Melissa Aguilar
 ##Users are able to input anything at the end of the URL by inputting /user/name
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 
+# Declare the Flask Object
 app = Flask(__name__)
 
-@app.route('/index')
-@app.route('/')
+
+# Adding dynamic route with templates
+@app.route("/index")
 def index():
-    return render_template("index.html")
+    return render_template("index.html"), 200
 
-@app.route('/#portfolio')
-def portfolio():
-    return render_template('index.html')
 
-if __name__ == '__main__':
-    app.run()
+# Run Flask Programmatically
+if __name__ == "__main__":
+    # Set Debug to true, set host IP to localhost, and set port to 80
+    app.run(debug=True, host="127.0.0.1", port=80)
+
+
 
