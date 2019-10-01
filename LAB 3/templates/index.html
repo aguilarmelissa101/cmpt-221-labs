@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% block head %}
-<head>
 
+<head>
+{% block head %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
 
-  {% block title %}<title>Melissa Aguilar</title>{% endblock %}
+  {% block title %}<title>Melissa Aguilar</title>{% endblock title %}
 
   <!-- Custom fonts for this theme -->
   <link href="{{url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -21,7 +21,7 @@
   <link href="{{url_for('static', filename='css/freelancer.min.css')}}" rel="stylesheet">
 
 </head>
-{% endblock %}
+{% endblock head %}
 
 {% block body %}
 <body id="page-top">
